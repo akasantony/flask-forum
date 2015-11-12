@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+__authors__ = "Akas Antony"
+__email__ = "antony.akas@gmail.com"
+__date__ = "27th, October 2015"
+
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory, jsonify
 import os
 from pymongo import MongoClient
