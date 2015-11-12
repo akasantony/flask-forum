@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Forum | PESIT South Campus </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                      <img align="left" class="img-responsive" src="img/pesit-logo.png" alt=""><a class="navbar-brand" href="#page-top">PESIT Student Forum</a>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="page-scroll">
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="page-scroll">
+                                    <a href="/ask">Ask</a>
+                                </li>
+                                <li class="page-scroll">
+                                  <a href="/about">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+        </div>
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                   <!--  <div class="col-lg-6 text-center"> -->
+                          <h3><div id="ques">{{result.question}}</div></h3>
+                          {% for eachanswer in result.answer%}
+                            <i><div id="ans">{{eachanswer}}</div></i>
+                          {% endfor %}
+                        <form name="sentAnswer" method="post" action="/{{result._id|string()}}" id="answerForm">
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Answer</label>
+                                    <input type="textarea" class="form-control" placeholder="Enter your answer here..." id="answer" name="answer" required data-validation-required-message="Please enter an answer.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <button type="submit" class="btn btn-success" id="submit">Answer</button>
+                                </div>
+                            </div>
+                        </form>                          
+                    </div>
+                </div>
+        </section>
+        <footer class="text-center">
+          <div class="footer-above">
+              <div class="container">
+                  <div class="row">
+                      <div class="footer-col col-md-12">
+                          <h3>Members</h3><center>
+                          <ul class="list-inline">
+                            <li><h6>@Akas Antony</h6></li>
+                            <li><h6>@Anirudh Ashok</h6></li>
+                            <li><h6>@Stephen Prabhu</h6></li>
+                            <li><h6>@Husain Kanba</h6></li>
+                          </ul></center>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            Copyright &copy; HuJuKa 2015
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>>
+</body>
+
+</html>
